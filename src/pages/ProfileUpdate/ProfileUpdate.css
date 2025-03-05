@@ -1,4 +1,4 @@
-.profile{
+.profile {
     min-height: 100vh;
     background: url(/background.png) no-repeat;
     background-size: cover;
@@ -6,7 +6,8 @@
     align-items: center;
     justify-content: center;
 }
-.profile-container{
+
+.profile-container {
     background: white;
     display: flex;
     align-items: center;
@@ -14,46 +15,77 @@
     min-width: 700px;
     border-radius: 10px;
 }
-.profile-pic{
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .profile-container {
+        flex-direction: column;
+        align-items: center;
+        min-width: auto;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .profile form {
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .profile input, textarea {
+        min-width: auto;
+        width: 100%;
+    }
+
+    .profile-pic {
+        max-width: 120px;
+    }
+
+    .profile form h3 {
+        font-size: 1.2em;
+    }
+
+    .profile form button {
+        font-size: 14px;
+        padding: 6px;
+    }
+}
+
+.profile-pic {
     max-width: 160px;
     aspect-ratio: 1/1;
     margin: 20px auto;
     border-radius: 50%;
 }
 
-.profile form{
+.profile form {
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 40px;
 }
-.profile form h3{
+
+.profile form h3 {
     font-weight: 500;
 }
-.profile label{
+
+.profile label {
     display: flex;
     align-items: center;
     gap: 10px;
     color: grey;
     cursor: pointer;
 }
-.profile-pic{
-    width: 160px;
-    aspect-ratio: 1/1;
-    margin: 20px auto;
-    border-radius: 50%;
-}
 
-.profile input,textarea{
+.profile input, textarea {
     padding: 10px;
     min-width: 300px;
     border: 1px solid #c9c9c9;
-    outline-color: #077eff ;
+    outline-color: #077eff;
 }
 
-.profile form button{
-    border:none;
-    color:white;
+.profile form button {
+    border: none;
+    color: white;
     background-color: #077eff;
     padding: 8px;
     font-size: 16px;
